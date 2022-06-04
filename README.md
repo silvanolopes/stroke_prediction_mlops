@@ -20,6 +20,14 @@ Para Atingir o Objetivo proposto, foi necessário a realização dos seguintes p
 
 2 - Uma vez tratado os dados, realizou-se o as etapas de separação do conjunto de dados em treinamento e teste, aplicando o pipeline proposto em aula, para colocar as informações em conformidade com a entrada de dados de um classificador binário, além de buscar os melhores modelos de acordo com os hiperparametros utilizados. Nessa etapa foi utilizado o [Scikit-Learn](https://scikit-learn.org/stable/) para o treinamento da ML e As métricas de desempenho da IA foram armazenadas no [wandb](https://wandb.ai/site).
 
-3 - Uma vez que foi gerado o melhor modelo de ML, nessa etapa foi necessário desenvolver e testar uma API capaz de utilizar a o modelo de IA para realizar as predições, sempre aplicando as melhores práticas de Continuous Integration (CI) e Continuous Delivery (CD). Nessa etapa foram utilizados o [github actions](https://docs.github.com/pt/actions) para o CI e o [Heroku](https://www.heroku.com/) para o CD. O desenvolviento e testes da API foram feitos por meio dos pacotes [FastAPI](https://fastapi.tiangolo.com/) e [PyTest](https://docs.pytest.org/en/7.1.x/),Respectivamente    
+3 - Uma vez que foi gerado o melhor modelo de ML, nessa etapa foi necessário desenvolver e testar uma API capaz de utilizar a o modelo de IA para realizar as predições, sempre aplicando as melhores práticas de Continuous Integration (CI) e Continuous Delivery (CD). Nessa etapa foram utilizados o [github actions](https://docs.github.com/pt/actions) para o CI e o [Heroku](https://www.heroku.com/) para o CD. O desenvolviento e testes da API foram feitos por meio do [FastAPI](https://fastapi.tiangolo.com/) e [PyTest](https://docs.pytest.org/en/7.1.x/).  
 
 ## Resultados:
+
+O Maior desafio que se enfrenta com esse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (Não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a Matriz de confusão abaixo ilustra bem o problema:
+
+![confusion_matrix](https://user-images.githubusercontent.com/13625437/172027757-4bd229df-f750-4836-ac00-bf340b768f99.png)
+
+Para mitigar esse problema, é possivel aplicar métodos de balanceamento de classes, de forma que o nivelamento dessas classes gere resultados mais próximos da realizade. Infelizmente, nesse projeto não foi possivel aplicar tais técnicas (ainda...)
+
+![Hyperparameter_tuning](https://user-images.githubusercontent.com/13625437/172027387-34d9afe2-2af1-49ea-aa7b-8954475afa47.png)
