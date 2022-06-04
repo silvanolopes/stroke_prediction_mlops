@@ -24,7 +24,20 @@ Para Atingir o Objetivo proposto, foi necessário a realização dos seguintes p
 
 ## Resultados:
 
-O Maior desafio que se enfrenta com esse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (Não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a Matriz de confusão abaixo ilustra bem o problema:
+O Maior desafio que se enfrenta com esse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (Não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a tabela abaixo mostra os resultados do conjunto de testes e ilustra bem o problema:
+
+|             | precision | recall    | f1-score  | support
+|-------------|-----------|-----------|-----------|---------
+| Classe 0    |      0.96 |      0.96 |    0.96   |   1458
+| Classe 1    |      0.16 |      0.15 |    0.15   |     75
+
+|             | precision | recall    | f1-score  | support
+|-------------|-----------|-----------|-----------|---------
+|    accuracy |           |           |    0.92   |   1533
+|   macro avg |      0.56 |    0.55   |    0.56   |   1533
+|weighted avg |      0.92 |    0.92   |    0.92   |   1533
+
+Esse desbalanceamento das classes impacta na geração de falsos positivos e negativos. A matrix de confusão abaixo mostra bem o impacto do desbalanceamento dessas classes.
 
 ![confusion_matrix](https://user-images.githubusercontent.com/13625437/172027757-4bd229df-f750-4836-ac00-bf340b768f99.png)
 
