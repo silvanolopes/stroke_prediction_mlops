@@ -2,7 +2,7 @@
 
 ## Quem sou eu:
 
-Meu nome é Silvano Lopes, sou formado no Bacharelado em Ciências e Tecnologia e Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Atualmente cursando o Mestrado em Engenharia Elétrica e Computação pela UFRN, por meio do Programa de Pós Graduação em Engenharia Elétrica e Computação, seguindo a linha de pesquisa de processamento inteligente da informação.
+Meu nome é Silvano Lopes, sou formado no Bacharelado em Ciências e Tecnologia e Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN). Atualmente curso o Mestrado em Engenharia Elétrica e Computação pela UFRN, por meio do Programa de Pós Graduação em Engenharia Elétrica e Computação, na linha de pesquisa de processamento inteligente da informação.
 
 ## Motivação:
 
@@ -24,7 +24,7 @@ Para Atingir o Objetivo proposto, foi necessário a realização dos seguintes p
 
 ## Resultados:
 
-O Maior desafio que se enfrenta com esse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (Não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a tabela abaixo mostra os resultados do conjunto de testes e ilustra bem o problema:
+O Maior desafio nesse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a tabela abaixo mostra os resultados do conjunto de testes e ilustra bem o problema:
 
 |             | precision | recall    | f1-score  | support
 |-------------|-----------|-----------|-----------|---------
