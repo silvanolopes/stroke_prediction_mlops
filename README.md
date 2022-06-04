@@ -20,7 +20,7 @@ Para Atingir o Objetivo proposto, foi necessário a realização dos seguintes p
 
 2 - Uma vez tratado os dados, realizou-se o as etapas de separação do conjunto de dados em treinamento e teste, aplicando o pipeline proposto em aula, para colocar as informações em conformidade com a entrada de dados de um classificador binário, além de buscar os melhores modelos de acordo com os hiperparametros utilizados. Nessa etapa foi utilizado o [Scikit-Learn](https://scikit-learn.org/stable/) para o treinamento da ML e As métricas de desempenho da IA foram armazenadas no [wandb](https://wandb.ai/site).
 
-3 - Uma vez que foi gerado o melhor modelo de ML, nessa etapa foi necessário desenvolver e testar uma API capaz de utilizar a o modelo de IA para realizar as predições, sempre aplicando as melhores práticas de Continuous Integration (CI) e Continuous Delivery (CD). Nessa etapa foram utilizados o [github actions](https://docs.github.com/pt/actions) para o CI e o [Heroku](https://www.heroku.com/) para o CD. O desenvolviento e testes da API foram feitos por meio do [FastAPI](https://fastapi.tiangolo.com/) e [PyTest](https://docs.pytest.org/en/7.1.x/).  
+3 - Uma vez que foi gerado o melhor modelo de ML, nessa etapa foi necessário desenvolver e testar uma API capaz de utilizar a o modelo de IA para realizar as predições, sempre aplicando as melhores práticas de Continuous Integration (CI) e Continuous Delivery (CD). Nessa etapa foram utilizados o [github actions](https://docs.github.com/pt/actions) para o CI e o [Heroku](https://www.heroku.com/) para o CD. O desenvolvimento e testes da API foram feitos por meio do [FastAPI](https://fastapi.tiangolo.com/) e [PyTest](https://docs.pytest.org/en/7.1.x/).  
 
 ## Resultados:
 
@@ -37,7 +37,7 @@ O Maior desafio nesse tipo especifico de problema é o desbalanceamento natural 
 |   macro avg |      0.56 |    0.55   |    0.56   |   1533
 |weighted avg |      0.92 |    0.92   |    0.92   |   1533
 
-Esse desbalanceamento das classes impacta na geração de falsos positivos e negativos. A matrix de confusão abaixo mostra bem o impacto do desbalanceamento dessas classes.
+Esse desbalanceamento das classes impacta na geração de falsos positivos e negativos. A matriz de confusão abaixo mostra bem o impacto do desbalanceamento dessas classes.
 
 ![confusion_matrix](https://user-images.githubusercontent.com/13625437/172027757-4bd229df-f750-4836-ac00-bf340b768f99.png)
 
