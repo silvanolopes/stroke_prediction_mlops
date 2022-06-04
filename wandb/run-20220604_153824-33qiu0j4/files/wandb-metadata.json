@@ -1,0 +1,25 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-06-04T18:38:29.617396",
+    "startedAt": "2022-06-04T18:38:24.555285",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "source.api.main:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\silva\\anaconda3\\envs\\deploy\\Scripts\\uvicorn-script.py",
+    "codePath": "..\\..\\anaconda3\\envs\\deploy\\Scripts\\uvicorn-script.py",
+    "git": {
+        "remote": "https://github.com/silvanolopes/stroke_prediction_mlops.git",
+        "commit": "b4cb8ccf3216597ddf796c40b0a661993abaff9a"
+    },
+    "email": "silvanocljunior@gmail.com",
+    "root": "C:/Users/silva/projects/stroke_prediction_mlops",
+    "host": "LOPES",
+    "username": "silva",
+    "executable": "C:\\Users\\silva\\anaconda3\\envs\\deploy\\python.exe"
+}

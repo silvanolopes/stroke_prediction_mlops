@@ -20,10 +20,10 @@ setattr(sys.modules["__main__"], "CategoricalTransformer", CategoricalTransforme
 setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
 
 # name of the model artifact
-artifact_model_name = "decision_tree/model_export:latest"
+artifact_model_name = "strokes_prediction/model_export:latest"
 
 # initiate the wandb project
-run = wandb.init(project="decision_tree",job_type="api")
+run = wandb.init(project="strokes_prediction",job_type="api")
 
 # create the api
 app = FastAPI()
@@ -31,38 +31,30 @@ app = FastAPI()
 # declare request example data using pydantic
 # a person in our dataset has the following attributes
 class Person(BaseModel):
-    age: int
-    workclass: str
-    fnlwgt: int
-    education: str
-    education_num: int
-    marital_status: str
-    occupation: str
-    relationship: str
-    race: str
-    sex: str
-    capital_gain: int
-    capital_loss: int
-    hours_per_week: int
-    native_country: str
-
+    gender:str
+    age: float
+    hypertension: int
+    heart_disease: int
+    ever_married: str
+    work_type: str
+    Residence_type: str
+    avg_glucose_level: float
+    bmi: float
+    smoking_status: str
+    
     class Config:
         schema_extra = {
             "example": {
-                "age": 72,
-                "workclass": 'Self-emp-inc',
-                "fnlwgt": 473748,
-                "education": 'Some-college',
-                "education_num": 10,
-                "marital_status": 'Married-civ-spouse',
-                "occupation": 'Exec-managerial',
-                "relationship": 'Husband',
-                "race": 'White',
-                "sex": 'Male',
-                "capital_gain": 0,
-                "capital_loss": 0,
-                "hours_per_week": 25,
-                "native_country": 'United-States'
+                "gender": 'Male',
+                "age": 74.0,
+                "hypertension": 1,
+                "heart_disease": 1,
+                "ever_married": 'Yes',
+                "work_type": 'Private',
+                "Residence_type": 'Rural',
+                "avg_glucose_level": 70.09,
+                "bmi": 27.4,
+                "smoking_status": 'never smoked',
             }
         }
 
@@ -70,11 +62,11 @@ class Person(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return """
-    <p><span style="font-size:28px"><strong>Hello World</strong></span></p>"""\
+    <p><span style="font-size:28px"><strong>Stroke Prediction</strong></span></p>"""\
     """<p><span style="font-size:20px">In this project, we will apply the skills """\
         """acquired in the Deploying a Scalable ML Pipeline in Production course to develop """\
         """a classification model on publicly available"""\
-        """<a href="http://archive.ics.uci.edu/ml/datasets/Adult"> Census Bureau data</a>.</span></p>"""
+        """<a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"> Stroke Dataset</a>.</span></p>"""
 
 # run the model inference and use a Person data structure via POST to the API.
 @app.post("/predict")
@@ -93,4 +85,4 @@ async def get_inference(person: Person):
     # Predict test data
     predict = pipe.predict(df)
 
-    return "low income <=50K" if predict[0] <= 0.5 else "high income >50K"
+    return "Non-Stroke" if predict[0] == 0 else "Stroke"

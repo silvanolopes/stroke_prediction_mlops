@@ -19,52 +19,44 @@ def test_root():
 
 # a unit test that tests the status code and response 
 # for an instance with a low income
-def test_get_inference_low_income():
+def test_get_inference_stroke():
 
     person = {
-        "age": 72,
-        "workclass": 'Self-emp-inc',
-        "fnlwgt": 473748,
-        "education": 'Some-college',
-        "education_num": 10,
-        "marital_status": 'Married-civ-spouse',
-        "occupation": 'Exec-managerial',
-        "relationship": 'Husband',
-        "race": 'White',
-        "sex": 'Male',
-        "capital_gain": 0,
-        "capital_loss": 0,
-        "hours_per_week": 25,
-        "native_country": 'United-States'
+        "gender": 'Female',
+        "age": 45.0,
+        "hypertension": 0,
+        "heart_disease": 0,
+        "ever_married": 'Yes',
+        "work_type": 'Private',
+        "Residence_type": 'Urban',
+        "avg_glucose_level": 97.95,
+        "bmi": 24.5,
+        "smoking_status": 'Unknown',
     }
 
     r = client.post("/predict", json=person)
     # print(r.json())
     assert r.status_code == 200
-    assert r.json() == "low income <=50K"
+    assert r.json() == "Non-Stroke"
 
 # a unit test that tests the status code and response 
 # for an instance with a high income
-def test_get_inference_high_income():
+def test_get_inference_stroke():
 
     person = {
-        "age": 46,
-        "workclass": 'Private',
-        "fnlwgt": 364548,
-        "education": 'Bachelors',
-        "education_num": 13,
-        "marital_status": 'Divorced',
-        "occupation": 'Sales',
-        "relationship": 'Not-in-family',
-        "race": 'White',
-        "sex": 'Male',
-        "capital_gain": 8614,
-        "capital_loss": 0,
-        "hours_per_week": 40,
-        "native_country": 'United-States'
+        "gender": 'Male',
+        "age": 74.0,
+        "hypertension": 1,
+        "heart_disease": 1,
+        "ever_married": 'Yes',
+        "work_type": 'Private',
+        "Residence_type": 'Rural',
+        "avg_glucose_level": 70.09,
+        "bmi": 27.4,
+        "smoking_status": 'never smoked',
     }
 
     r = client.post("/predict", json=person)
     print(r.json())
     assert r.status_code == 200
-    assert r.json() == "high income >50K"
+    assert r.json() == "Stroke"
