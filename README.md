@@ -2,7 +2,7 @@
 
 ## Quem sou eu:
 
-Meu nome é Silvano Lopes, sou formado no Bacharelado em Ciências e Tecnologia e Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Atualmente cursando o Mestrado em Engenharia Elétrica e Computação pela UFRN, por meio do Programa de Pós Graduação em Engenharia Elétrica e Computação, Seguindo a Linha de pesquisa de processamento inteligente da informação.
+Meu nome é Silvano Lopes, sou formado no Bacharelado em Ciências e Tecnologia e Engenharia de Computação pela Universidade Federal do Rio Grande do Norte (UFRN), Atualmente cursando o Mestrado em Engenharia Elétrica e Computação pela UFRN, por meio do Programa de Pós Graduação em Engenharia Elétrica e Computação, seguindo a linha de pesquisa de processamento inteligente da informação.
 
 ## Motivação:
 
