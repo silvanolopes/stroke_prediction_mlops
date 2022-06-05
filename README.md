@@ -45,5 +45,6 @@ Para mitigar esse problema, é possivel aplicar métodos de balanceamento de cla
 
 Links Uteis:
 
-Aplicação: https://strokes-prediction-app.herokuapp.com/
-Repositório: https://github.com/silvanolopes/stroke_prediction_mlops
+* Aplicação: https://strokes-prediction-app.herokuapp.com/
+
+* Repositório: https://github.com/silvanolopes/stroke_prediction_mlops
