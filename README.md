@@ -24,7 +24,7 @@ Para Atingir o Objetivo proposto, foi necessário a realização dos seguintes p
 
 ## Resultados:
 
-O Maior desafio nesse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a tabela abaixo mostra os resultados do conjunto de testes e ilustra bem o problema:
+O Maior desafio nesse tipo especifico de problema é o desbalanceamento natural das classes de saída. Em outras palavras, a classe minoritária possui um conjunto de dados muito pequeno quando comparado com a classe marjoritária, muito ocasionado pela raridade do evento (não vai ser todo mundo que teve ou vai ter um AVC). Para uma máquina de aprendizado trabalhando com classificação binária é um grande problema pois essa diferença vai gerar uma falsa precisão na etapa de treinamento, com valores de precisão acima dos 90%, sendo que na realidade, essa precisão só acontece por conta da grande diferença entre as classes minoritária e marjoritária. a tabela abaixo mostra os resultados do conjunto de testes e ilustra bem o problema:
 
 |             | precision | recall    | f1-score  | support
 |-------------|-----------|-----------|-----------|---------
@@ -37,10 +37,13 @@ O Maior desafio nesse tipo especifico de problema é o desbalanceamento natural 
 |   macro avg |      0.56 |    0.55   |    0.56   |   1533
 |weighted avg |      0.92 |    0.92   |    0.92   |   1533
 
-Esse desbalanceamento das classes impacta na geração de falsos positivos e negativos. A matriz de confusão abaixo mostra bem o impacto do desbalanceamento dessas classes.
+Esse desbalanceamento das classes impacta na geração de falsos positivos e negativos. A matriz de confusão abaixo mostra o impacto do desbalanceamento dessas classes.
 
 ![confusion_matrix](https://user-images.githubusercontent.com/13625437/172027757-4bd229df-f750-4836-ac00-bf340b768f99.png)
 
-Para mitigar esse problema, é possivel aplicar métodos de balanceamento de classes, de forma que o nivelamento dessas classes gere resultados mais próximos da realidade. Infelizmente, nesse projeto não foi possivel aplicar tais técnicas (ainda...)
+Para mitigar esse problema, é possivel aplicar métodos de balanceamento de classes, de forma que os reultados aproximen-se mais da realidade. Infelizmente, nesse projeto ainda não foi possivel aplicar tais técnicas de balanceamento. É um Trabalho em andamento. De qualquer forma mesmo com o desbalanceamento de classes, foi possivel gerar o melhor modelo dentro dos dados possiveis, assim como foi possivel colocar o modelo para produção.
 
-![Hyperparameter_tuning](https://user-images.githubusercontent.com/13625437/172027387-34d9afe2-2af1-49ea-aa7b-8954475afa47.png)
+Links Uteis:
+
+Aplicação: https://strokes-prediction-app.herokuapp.com/
+Repositório: https://github.com/silvanolopes/stroke_prediction_mlops
