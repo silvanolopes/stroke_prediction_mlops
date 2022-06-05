@@ -41,6 +41,6 @@ Esse desbalanceamento das classes impacta na geração de falsos positivos e neg
 
 ![confusion_matrix](https://user-images.githubusercontent.com/13625437/172027757-4bd229df-f750-4836-ac00-bf340b768f99.png)
 
-Para mitigar esse problema, é possivel aplicar métodos de balanceamento de classes, de forma que o nivelamento dessas classes gere resultados mais próximos da realizade. Infelizmente, nesse projeto não foi possivel aplicar tais técnicas (ainda...)
+Para mitigar esse problema, é possivel aplicar métodos de balanceamento de classes, de forma que o nivelamento dessas classes gere resultados mais próximos da realidade. Infelizmente, nesse projeto não foi possivel aplicar tais técnicas (ainda...)
 
 ![Hyperparameter_tuning](https://user-images.githubusercontent.com/13625437/172027387-34d9afe2-2af1-49ea-aa7b-8954475afa47.png)
