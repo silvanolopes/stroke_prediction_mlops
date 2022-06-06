@@ -22,7 +22,7 @@ person = {
         "smoking_status": 'formerly smoked',
     }
 
-#url = "https://decision-tree-high-income-app.herokuapp.com"
+#url = "https://strokes-prediction-app.herokuapp.com/"
 url = "http://127.0.0.1:8000"
 response = requests.post(f"{url}/predict",
                          json=person)
